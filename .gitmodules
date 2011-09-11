@@ -1,0 +1,3 @@
+[submodule "themes/violin/plugins/normalize.css"]
+	path = themes/violin/plugins/normalize.css
+	url = git@github.com:jessebeach/normalize.css.git
