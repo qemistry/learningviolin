@@ -2,12 +2,39 @@
 
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
-$s1: rgb(102, 34, 48);
-$s1_dark_20: darken($s1, 20%);
-$s2: rgb(176, 44, 62);
-$s2_dark_20: darken($s2, 20%);
-$s3: rgb(125, 149, 170);
-$s3_light_20: lighten($s3, 20%);
+$s1: rgb(110, 35, 61);
+$s1_dark_20: darken($s1, 10%);
+$s2: rgb(197, 77, 111);
+$s2_dark_20: darken($s2, 10%);
+$s3: rgb(217, 152, 0);
+$s3_light_20: lighten($s3, 10%);
+
+/* @group Mixins */
+
+/* @group gradients */
+
+@mixin gradient($start-color, $start-loc, $end-color, $end-loc, $type: linear, $rotation: -90deg) {
+  background-image: -moz-#{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+  background-image: -o-#{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+  background-image: -webkit-#{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+  background-image: #{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+}
+
+/* @end */
+
+/* @end */
 
 /* @group Colors */
 
@@ -18,13 +45,14 @@ a {
 }
 
 a {
-  color: $s2;
-  &:hover { color: $s2; }
-  &:focus { color: $s2; }
-  &:active { color: $s2; }
+  color: $s3;
+  &:hover { color: lighten($s3, 10%); }
+  &:focus { color: lighten($s3, 10%); }
+  &:active { color: lighten($s3, 10%); }
 }
 
-.section-header {
+.section-header,
+.section-footer {
   a {
     color: $white;
     &:link { color: $white; }
@@ -33,6 +61,9 @@ a {
     &:focus { color: $white; }
     &:active { color: $white; }
   }
+}
+
+.site-name {
   text: {
     shadow: 0px 1px 2px black;
   }
@@ -43,38 +74,6 @@ a {
 /* @group Presentation */
 
 body {
-  background: {
-    attachment: scroll;
-    color: $s2;
-    image: none;
-    image:
-      -moz-linear-gradient(
-        -90deg,
-        rgba(0,0,0, 0.1) 0px,
-        rgba(255,255,255,0) 180px);
-    image:
-      -o-linear-gradient(
-        -90deg,
-        rgba(0,0,0, 0.1) 0px,
-        rgba(255,255,255,0) 180px);
-    image:
-      -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0.0, rgba(0,0,0, 0.1)),
-        color-stop(0.1, rgba(255,255,255,0))
-      );
-    image:
-      -webkit-linear-gradient(
-        -90deg,
-        rgba(0,0,0, 0.1) 0px,
-        rgba(255,255,255,0) 180px);
-    position: left top;
-    repeat: no-repeat;
-  }
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
   font: {
     family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     size: 90%;
@@ -95,13 +94,7 @@ body {
   background: {
     attachment: scroll;
     color: transparent;
-    image: none;
-    image:
-      /* url("../images/fabric.png"),
-      url("../images/bg-2.png"), */
-      url("../images/bg-3.png"),
-      /* url("../images/bg-1.png"), */
-      url("../images/bg-4.png");
+    image: transparent;
     position: left top;
     repeat: repeat, repeat, repeat, repeat, repeat;
   }
@@ -113,15 +106,13 @@ body {
 .zone-content {
   background: {
     color: $white;
+    color: transparentize($white, 0.1);
     clip: padding-box;
   }
   border: {
     color: transparent;
     style: solid;
     width: 10px 10px 0;
-  }
-  box: {
-    shadow: 0 0 3px $black;
   }
   padding: {
     bottom: 54px;
@@ -130,8 +121,11 @@ body {
 }
 
 #section-footer {
+  background: {
+    color: $s2;
+  }
   border: {
-    top: 12px solid $s2_dark_20;
+    top: 12px solid $s1;
   }
   padding: {
     bottom: 36px;
@@ -140,15 +134,26 @@ body {
 }
 
 .site-name {
-  margin:  {
+  margin: {
+    bottom: 0;
     top: 0;
   }
 }
 
-aside ul {
-  list: {
-    style: {
-      position: inside;
+.site-name {
+  a {
+    text: {
+      decoration: none;
+    }
+  }
+}
+
+aside {
+  ul {
+    list: {
+      style: {
+        position: inside;
+      }
     }
   }
 }
@@ -158,5 +163,47 @@ aside ul {
     size: 75%;
   }
 }
+
+/* @end */
+
+/* @group Components */
+
+/* @group Nice menus */
+
+ul.nice-menu,
+ul.nice-menu-down {
+  background: {
+    color: transparent;
+  }
+  li,
+  li.menuparent {
+    background:  {
+      color:  transparent;
+    }
+    border: 0 none;
+    a {
+      background: {
+        color: transparent;
+      }
+    }
+  }
+  li.menuparent {
+    &:hover {
+      background:  {
+        color:  transparent;
+      }
+    }
+    ul {
+      border: 0 none;
+    }
+    li {
+      background: {
+        color: $s1;
+      }
+    }
+  }
+}
+
+/* @end */
 
 /* @end */

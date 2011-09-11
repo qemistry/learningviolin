@@ -1,1 +1,56 @@
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$s1: rgb(110, 35, 61);
+$s1_dark_20: darken($s1, 10%);
+$s2: rgb(197, 77, 111);
+$s2_dark_20: darken($s2, 10%);
+$s3: rgb(217, 152, 0);
+$s3_light_20: lighten($s3, 10%);
+
+/* @group Mixins */
+
+/* @group gradients */
+
+@mixin gradient($start-color, $start-loc, $end-color, $end-loc, $type: linear, $rotation: -90deg) {
+  background-image: -moz-#{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+  background-image: -o-#{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+  background-image: -webkit-#{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+  background-image: #{$type}-gradient(
+    #{$rotation},
+    #{$start-color} #{$start-loc}, 
+    #{$end-color} #{$end-loc});
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Presentation */
+
+body {
+  background: {
+    attachment: scroll;
+    image: url("../images/bg.png");
+    position: center top;
+    repeat: repeat-x;
+  }
+}
+
+.zone-content {
+  box: {
+    shadow: 0 0 3px $black;
+  }
+}
+
+/* @end */

@@ -10,3 +10,8 @@
  * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
  * for more information on this topic.
  */
+ 
+ function violin_preprocess_html(&$vars) {
+   $path = drupal_get_path('theme', 'violin');
+   drupal_add_css($path . '/plugins/normalize.css/normalize.css', array('group' => CSS_THEME, 'weight' => 0));
+ }
