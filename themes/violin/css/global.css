@@ -1,84 +1,88 @@
 /* This file will hold the main styles for your website. */
+/* @group Mixins */
+/* @group gradients */
+/* @end */
+/* @end */
 /* @group Colors */
 a {
-  color: #7d95aa; }
+  color: #d99800; }
   a:link {
-    color: #7d95aa; }
+    color: #d99800; }
   a:visited {
-    color: #7d95aa; }
+    color: #d99800; }
 
 a {
-  color: #b02c3e; }
+  color: #d99800; }
   a:hover {
-    color: #b02c3e; }
+    color: #ffb70d; }
   a:focus {
-    color: #b02c3e; }
+    color: #ffb70d; }
   a:active {
-    color: #b02c3e; }
+    color: #ffb70d; }
 
-.section-header {
-  text-shadow: 0px 1px 2px black; }
-  .section-header a {
+.section-header a,
+.section-footer a {
+  color: white; }
+  .section-header a:link,
+  .section-footer a:link {
     color: white; }
-    .section-header a:link {
-      color: white; }
-    .section-header a:visited {
-      color: white; }
-    .section-header a:hover {
-      color: white; }
-    .section-header a:focus {
-      color: white; }
-    .section-header a:active {
-      color: white; }
+  .section-header a:visited,
+  .section-footer a:visited {
+    color: white; }
+  .section-header a:hover,
+  .section-footer a:hover {
+    color: white; }
+  .section-header a:focus,
+  .section-footer a:focus {
+    color: white; }
+  .section-header a:active,
+  .section-footer a:active {
+    color: white; }
+
+.site-name {
+  text-shadow: 0px 1px 2px black; }
 
 /* @end */
 /* @group Presentation */
 body {
-  background-attachment: scroll;
-  background-color: #b02c3e;
-  background-image: none;
-  background-image: -moz-linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0) 180px);
-  background-image: -o-linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0) 180px);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(0.1, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0) 180px);
-  background-position: left top;
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 90%; }
 
 .section-header {
-  background-color: #662230;
+  background-color: #6e233d;
   padding-bottom: 12px;
   padding-top: 12px; }
 
 .section-content {
   background-attachment: scroll;
   background-color: transparent;
-  background-image: none;
-  background-image: url("../images/bg-3.png"), url("../images/bg-4.png");
+  background-image: transparent;
   background-position: left top;
   background-repeat: repeat, repeat, repeat, repeat, repeat;
   padding-top: 18px; }
 
 .zone-content {
   background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   background-clip: padding-box;
   border-color: transparent;
   border-style: solid;
   border-width: 10px 10px 0;
-  box-shadow: 0 0 3px black;
   padding-bottom: 54px;
   padding-top: 5px; }
 
 #section-footer {
-  border-top: 12px solid #5e1821;
+  background-color: #c54d6f;
+  border-top: 12px solid #6e233d;
   padding-bottom: 36px;
   padding-top: 36px; }
 
 .site-name {
+  margin-bottom: 0;
   margin-top: 0; }
+
+.site-name a {
+  text-decoration: none; }
 
 aside ul {
   list-style-position: inside; }
@@ -86,4 +90,32 @@ aside ul {
 #breadcrumb {
   font-size: 75%; }
 
+/* @end */
+/* @group Components */
+/* @group Nice menus */
+ul.nice-menu,
+ul.nice-menu-down {
+  background-color: transparent; }
+  ul.nice-menu li,
+  ul.nice-menu li.menuparent,
+  ul.nice-menu-down li,
+  ul.nice-menu-down li.menuparent {
+    background-color: transparent;
+    border: 0 none; }
+    ul.nice-menu li a,
+    ul.nice-menu li.menuparent a,
+    ul.nice-menu-down li a,
+    ul.nice-menu-down li.menuparent a {
+      background-color: transparent; }
+  ul.nice-menu li.menuparent:hover,
+  ul.nice-menu-down li.menuparent:hover {
+    background-color: transparent; }
+  ul.nice-menu li.menuparent ul,
+  ul.nice-menu-down li.menuparent ul {
+    border: 0 none; }
+  ul.nice-menu li.menuparent li,
+  ul.nice-menu-down li.menuparent li {
+    background-color: #6e233d; }
+
+/* @end */
 /* @end */

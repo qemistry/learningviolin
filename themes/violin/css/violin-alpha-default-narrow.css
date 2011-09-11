@@ -1,1 +1,16 @@
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* @group Mixins */
+/* @group gradients */
+/* @end */
+/* @end */
+/* @group Presentation */
+body {
+  background-attachment: scroll;
+  background-image: url("../images/bg.png");
+  background-position: center top;
+  background-repeat: repeat-x; }
+
+.zone-content {
+  box-shadow: 0 0 3px black; }
+
+/* @end */
