@@ -1,0 +1,89 @@
+/* This file will hold the main styles for your website. */
+/* @group Colors */
+a {
+  color: #7d95aa; }
+  a:link {
+    color: #7d95aa; }
+  a:visited {
+    color: #7d95aa; }
+
+a {
+  color: #b02c3e; }
+  a:hover {
+    color: #b02c3e; }
+  a:focus {
+    color: #b02c3e; }
+  a:active {
+    color: #b02c3e; }
+
+.section-header {
+  text-shadow: 0px 1px 2px black; }
+  .section-header a {
+    color: white; }
+    .section-header a:link {
+      color: white; }
+    .section-header a:visited {
+      color: white; }
+    .section-header a:hover {
+      color: white; }
+    .section-header a:focus {
+      color: white; }
+    .section-header a:active {
+      color: white; }
+
+/* @end */
+/* @group Presentation */
+body {
+  background-attachment: scroll;
+  background-color: #b02c3e;
+  background-image: none;
+  background-image: -moz-linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0) 180px);
+  background-image: -o-linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0) 180px);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(0.1, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.1) 0px, rgba(255, 255, 255, 0) 180px);
+  background-position: left top;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 90%; }
+
+.section-header {
+  background-color: #662230;
+  padding-bottom: 12px;
+  padding-top: 12px; }
+
+.section-content {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: none;
+  background-image: url("../images/bg-3.png"), url("../images/bg-4.png");
+  background-position: left top;
+  background-repeat: repeat, repeat, repeat, repeat, repeat;
+  padding-top: 18px; }
+
+.zone-content {
+  background-color: white;
+  background-clip: padding-box;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 10px 10px 0;
+  box-shadow: 0 0 3px black;
+  padding-bottom: 54px;
+  padding-top: 5px; }
+
+#section-footer {
+  border-top: 12px solid #5e1821;
+  padding-bottom: 36px;
+  padding-top: 36px; }
+
+.site-name {
+  margin-top: 0; }
+
+aside ul {
+  list-style-position: inside; }
+
+#breadcrumb {
+  font-size: 75%; }
+
+/* @end */

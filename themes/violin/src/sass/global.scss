@@ -1,0 +1,162 @@
+/* This file will hold the main styles for your website. */
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$s1: rgb(102, 34, 48);
+$s1_dark_20: darken($s1, 20%);
+$s2: rgb(176, 44, 62);
+$s2_dark_20: darken($s2, 20%);
+$s3: rgb(125, 149, 170);
+$s3_light_20: lighten($s3, 20%);
+
+/* @group Colors */
+
+a {
+  color: $s3;
+  &:link { color: $s3; }
+  &:visited { color: $s3; }
+}
+
+a {
+  color: $s2;
+  &:hover { color: $s2; }
+  &:focus { color: $s2; }
+  &:active { color: $s2; }
+}
+
+.section-header {
+  a {
+    color: $white;
+    &:link { color: $white; }
+    &:visited { color: $white; }
+    &:hover { color: $white; }
+    &:focus { color: $white; }
+    &:active { color: $white; }
+  }
+  text: {
+    shadow: 0px 1px 2px black;
+  }
+}
+
+/* @end */
+
+/* @group Presentation */
+
+body {
+  background: {
+    attachment: scroll;
+    color: $s2;
+    image: none;
+    image:
+      -moz-linear-gradient(
+        -90deg,
+        rgba(0,0,0, 0.1) 0px,
+        rgba(255,255,255,0) 180px);
+    image:
+      -o-linear-gradient(
+        -90deg,
+        rgba(0,0,0, 0.1) 0px,
+        rgba(255,255,255,0) 180px);
+    image:
+      -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.0, rgba(0,0,0, 0.1)),
+        color-stop(0.1, rgba(255,255,255,0))
+      );
+    image:
+      -webkit-linear-gradient(
+        -90deg,
+        rgba(0,0,0, 0.1) 0px,
+        rgba(255,255,255,0) 180px);
+    position: left top;
+    repeat: no-repeat;
+  }
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType='0', startColorstr=#f6f6f6, endColorstr=#d6d6d4);
+  font: {
+    family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    size: 90%;
+  }
+}
+
+.section-header {
+  background: {
+    color: $s1; 
+  }
+  padding: {
+    bottom: 12px;
+    top: 12px;
+  }
+}
+
+.section-content {
+  background: {
+    attachment: scroll;
+    color: transparent;
+    image: none;
+    image:
+      /* url("../images/fabric.png"),
+      url("../images/bg-2.png"), */
+      url("../images/bg-3.png"),
+      /* url("../images/bg-1.png"), */
+      url("../images/bg-4.png");
+    position: left top;
+    repeat: repeat, repeat, repeat, repeat, repeat;
+  }
+  padding: {
+    top: 18px;
+  }
+}
+
+.zone-content {
+  background: {
+    color: $white;
+    clip: padding-box;
+  }
+  border: {
+    color: transparent;
+    style: solid;
+    width: 10px 10px 0;
+  }
+  box: {
+    shadow: 0 0 3px $black;
+  }
+  padding: {
+    bottom: 54px;
+    top: 5px;
+  }
+}
+
+#section-footer {
+  border: {
+    top: 12px solid $s2_dark_20;
+  }
+  padding: {
+    bottom: 36px;
+    top: 36px;
+  }
+}
+
+.site-name {
+  margin:  {
+    top: 0;
+  }
+}
+
+aside ul {
+  list: {
+    style: {
+      position: inside;
+    }
+  }
+}
+
+#breadcrumb {
+  font: {
+    size: 75%;
+  }
+}
+
+/* @end */
