@@ -54,8 +54,7 @@ body {
   position: relative;
 }
 
-.zone-menu-wrapper::before,
-.zone-menu-wrapper::after {
+.zone-menu-wrapper::before {
   background:  {
     attachment: scroll;
     color: transparent;
@@ -76,16 +75,6 @@ body {
   width: 581px;
   left: 0;
   top: -35px;
-}
-
-.zone-menu-wrapper::after {
-  background:  {
-    image: url("../images/swoop-bottom.png");
-    position: right top;
-  }
-  height: 50px;
-  width: 697px;
-  right: 0;
 }
 
 .zone-content {
