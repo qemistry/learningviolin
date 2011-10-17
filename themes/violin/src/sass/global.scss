@@ -2,7 +2,7 @@
 
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
-$s1: rgb(110, 35, 61);
+$s1: rgb(204, 30, 83);
 $s1_dark_20: darken($s1, 10%);
 $s2: rgb(197, 77, 111);
 $s2_dark_20: darken($s2, 10%);
@@ -51,7 +51,7 @@ a {
   &:active { color: lighten($s3, 10%); }
 }
 
-.section-header,
+.zone-menu-wrapper,
 .section-footer {
   a {
     color: $white;
@@ -60,12 +60,6 @@ a {
     &:hover { color: $white; }
     &:focus { color: $white; }
     &:active { color: $white; }
-  }
-}
-
-.site-name {
-  text: {
-    shadow: 0px 1px 2px black;
   }
 }
 
@@ -80,10 +74,30 @@ body {
   }
 }
 
-.section-header {
+.site-name {
+  font: {
+    size: xx-large;
+  }
+}
+
+.section-header,
+.zone-branding {
+  margin: {
+    bottom: 12px;
+    top: 12px;
+  }
+}
+
+.zone-menu-wrapper {
   background: {
     color: $s1; 
   }
+  box: {
+    shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+}
+
+.zone-menu {
   padding: {
     bottom: 12px;
     top: 12px;
@@ -120,6 +134,18 @@ body {
   }
 }
 
+.zone-content {
+  font: {
+    size: small;
+  }
+}
+
+.zone-content h2 {
+  font: {
+    size: medium;
+  }
+}
+
 #section-footer {
   background: {
     color: $s2;
@@ -142,6 +168,7 @@ body {
 
 .site-name {
   a {
+    color: $black;
     text: {
       decoration: none;
     }
@@ -187,10 +214,27 @@ ul.nice-menu-down {
       }
     }
   }
+  li {
+    li.menuparent {
+      background: {
+        image: url("../images/arrow-right.png");
+        position: right center;
+      }
+      &:hover {
+        background: {
+          image: url("../images/arrow-right.png");
+        }
+      }
+    }
+  }
   li.menuparent {
+    background:  {
+      image: url("../images/arrow-down.png");
+    }
     &:hover {
       background:  {
         color:  transparent;
+        image: url("../images/arrow-down.png");
       }
     }
     ul {
@@ -201,6 +245,12 @@ ul.nice-menu-down {
         color: $s1;
       }
     }
+  }
+}
+
+ul.nice-menu > li + li {
+  margin: {
+    left: 12px;
   }
 }
 

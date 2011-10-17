@@ -2,7 +2,7 @@
 
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
-$s1: rgb(110, 35, 61);
+$s1: rgb(18, 35, 61);
 $s1_dark_20: darken($s1, 10%);
 $s2: rgb(197, 77, 111);
 $s2_dark_20: darken($s2, 10%);
@@ -41,10 +41,51 @@ $s3_light_20: lighten($s3, 10%);
 body {
   background: {
     attachment: scroll;
-    image: url("../images/bg.png");
     position: center top;
     repeat: repeat-x;
   }
+  margin: 0;
+}
+
+.zone-menu-wrapper {
+  margin: {
+    top: 35px;
+  }
+  position: relative;
+}
+
+.zone-menu-wrapper::before,
+.zone-menu-wrapper::after {
+  background:  {
+    attachment: scroll;
+    color: transparent;
+    repeat: no-repeat;
+  }
+  content: " ";
+  display: block;
+  position: absolute;
+  visibility: visible;
+}
+
+.zone-menu-wrapper::before {
+  background:  {
+    image: url("../images/swoop-top.png");
+    position: left bottom;
+  }
+  height: 35px;
+  width: 581px;
+  left: 0;
+  top: -35px;
+}
+
+.zone-menu-wrapper::after {
+  background:  {
+    image: url("../images/swoop-bottom.png");
+    position: right top;
+  }
+  height: 50px;
+  width: 697px;
+  right: 0;
 }
 
 .zone-content {

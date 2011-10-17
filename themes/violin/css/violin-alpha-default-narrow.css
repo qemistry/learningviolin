@@ -6,9 +6,38 @@
 /* @group Presentation */
 body {
   background-attachment: scroll;
-  background-image: url("../images/bg.png");
   background-position: center top;
-  background-repeat: repeat-x; }
+  background-repeat: repeat-x;
+  margin: 0; }
+
+.zone-menu-wrapper {
+  margin-top: 35px;
+  position: relative; }
+
+.zone-menu-wrapper::before,
+.zone-menu-wrapper::after {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  content: " ";
+  display: block;
+  position: absolute;
+  visibility: visible; }
+
+.zone-menu-wrapper::before {
+  background-image: url("../images/swoop-top.png");
+  background-position: left bottom;
+  height: 35px;
+  width: 581px;
+  left: 0;
+  top: -35px; }
+
+.zone-menu-wrapper::after {
+  background-image: url("../images/swoop-bottom.png");
+  background-position: right top;
+  height: 50px;
+  width: 697px;
+  right: 0; }
 
 .zone-content {
   box-shadow: 0 0 3px black; }
