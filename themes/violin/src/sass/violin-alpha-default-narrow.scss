@@ -78,6 +78,9 @@ body {
 }
 
 .zone-content {
+  border: {
+    radius: 10px;
+  }
   box: {
     shadow: 0 0 3px $black;
   }
